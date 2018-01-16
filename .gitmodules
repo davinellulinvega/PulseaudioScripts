@@ -1,0 +1,3 @@
+[submodule "Powermate"]
+	path = Powermate
+	url = git@github.com:davinellulinvega/powermate.git
