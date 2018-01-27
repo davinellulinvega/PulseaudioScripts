@@ -62,8 +62,13 @@ if __name__ == "__main__":
         # Toggle the mute status of the selected sink
         toggle_mute_sinks([app_sink])
 
-        # Declare a new notification
-        NOTE.update("Toggle Mute status", "{}".format(app_sink.proplist.get("application.name")), "/usr/share/icons/Faenza/apps/48/gnome-volume-control.png")
+        print(app_sink.mute)
+        if app_sink.mute:
+            # Declare a new notification
+            NOTE.update("Muted status", "Muted {}".format(app_sink.proplist.get("application.name")), "/usr/share/icons/Faenza/apps/48/gnome-volume-control.png")
+        else:
+            # Declare a new notification
+            NOTE.update("Mute status", "Unmuted {}".format(app_sink.proplist.get("application.name")), "/usr/share/icons/Faenza/apps/48/gnome-volume-control.png")
 
         # Show the notification
         NOTE.show()
