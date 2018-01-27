@@ -34,6 +34,6 @@ try:
 except MenuError:
     exit(-1)
 
-# Move the sink input to the choosen sink
+# Move the sink input to the chosen sink
 if s_in_idx is not None and s_idx is not None:
     p.sink_input_move(s_in_idx, s_idx)
