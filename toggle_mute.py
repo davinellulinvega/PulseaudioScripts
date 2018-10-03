@@ -4,11 +4,11 @@ from dynmen.rofi import Rofi
 from dynmen.menu import MenuError
 import notify2 as pynotify
 
+pynotify.init("Vol notify")
 PULSE = Pulse()
 NOTE = pynotify.Notification("Volume", "0", "/usr/share/icons/Faenza/apps/48/"
                                                   "gnome-volume-control.png")
 NOTE.set_urgency(0)
-pynotify.init("Vol notify")
 
 def get_sinks():
     """
